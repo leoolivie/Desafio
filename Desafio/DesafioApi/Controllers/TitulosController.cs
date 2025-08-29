@@ -18,19 +18,19 @@ public class TitulosController : ControllerBase
     }
     
     [HttpGet]
-public IActionResult Get()
-{
-    var titulosDTO = Titulos.Select(t => new TituloDTO
+    public IActionResult Get()
     {
-        NumeroTitulo = t.NumeroTitulo,
-        NomeDevedor = t.NomeDevedor,
-        CpfDevedor = t.CpfDevedor,
-        PercentualJuros = t.PercentualJuros,
-        PercentualMulta = t.PercentualMulta,
-        Parcelas = t.Parcelas
-    }).ToList();
+        var titulosDetalhado = Titulos.Select(t => new TituloDetalhado
+        {
+            NumeroTitulo = t.NumeroTitulo,
+            NomeDevedor = t.NomeDevedor,
+            CpfDevedor = t.CpfDevedor,
+            PercentualJuros = t.PercentualJuros,
+            PercentualMulta = t.PercentualMulta,
+            Parcelas = t.Parcelas
+        }).ToList();
 
-    return Ok(titulosDTO);
-}
-    
+        return Ok(titulosDetalhado);
+    }
+        
 }

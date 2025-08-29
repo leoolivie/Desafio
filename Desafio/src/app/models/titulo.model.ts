@@ -1,8 +1,4 @@
-export interface Parcela {
-  numero: number;
-  dataVencimento: string;
-  valor: number;
-}
+import { Parcela } from './parcela.model';
 
 export interface Titulo {
   numeroTitulo: string;
