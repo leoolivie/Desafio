@@ -40,13 +40,35 @@ export class TituloForm {
   constructor(private tituloService: TituloService) {}
 
   adicionarParcela() {
-    this.titulo.parcelas.push({ ...this.parcela });
+    if (this.parcela.valor <= 0) {
+      alert('Preencha a data de vencimento e um valor maior que zero.');
+
+      return;
+    }
+
+    const vencimentoFormatado = new Date(this.parcela.dataVencimento).toISOString();
+
+    this.titulo.parcelas.push({
+      numero: this.parcela.numero,
+      dataVencimento: vencimentoFormatado,
+      valor: this.parcela.valor,
+    });
+
     this.parcela = { numero: this.parcela.numero + 1, dataVencimento: '', valor: 0 };
   }
 
   salvar() {
+    const parcelasValidas = this.titulo.parcelas.every((p) => p.dataVencimento && p.valor > 0);
+
+    if (parcelasValidas === false) {
+      alert('Todas as parcelas devem ter data de vencimento e valor maior que zero.');
+
+      return;
+    }
+
     this.tituloService.adicionarTitulo(this.titulo).subscribe(() => {
       alert('Título salvo!');
+
       this.titulo = {
         numeroTitulo: '',
         nomeDevedor: '',
@@ -55,6 +77,7 @@ export class TituloForm {
         percentualMulta: 0,
         parcelas: [],
       };
+
       this.parcela = { numero: 1, dataVencimento: '', valor: 0 };
     });
   }
