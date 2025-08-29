@@ -1,4 +1,3 @@
-# Etapa 1: Build do Angular
 FROM node:20 AS build
 WORKDIR /app
 
@@ -10,7 +9,6 @@ COPY src/ ./src/
 RUN npm install
 RUN npm run build --prod
 
-# Etapa 2: Servir com Nginx
 FROM nginx:1.29.1-alpine AS final
 
 RUN rm -rf /usr/share/nginx/html/*

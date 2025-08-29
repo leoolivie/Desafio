@@ -13,7 +13,7 @@ services:
 
   frontend:
     build:
-      context: . # aponta para a raiz onde estão package.json, angular.json e src/
+      context: .
       dockerfile: Dockerfile
     ports:
       - '4200:80'
