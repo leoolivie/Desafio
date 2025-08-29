@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "7y8tZiSo4hU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\leool\\OneDrive\\Documentos\\Paschoalotto\\Desafio\\Desafio\\Desafio\\DesafioApi\\DesafioApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\leool\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.7\\microsoft.aspnetcore.openapi.8.0.7.nupkg.sha512",
+    "C:\\Users\\leool\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\leool\\.nuget\\packages\\microsoft.openapi\\1.6.23\\microsoft.openapi.1.6.23.nupkg.sha512",
+    "C:\\Users\\leool\\.nuget\\packages\\swashbuckle.aspnetcore\\8.1.0\\swashbuckle.aspnetcore.8.1.0.nupkg.sha512",
+    "C:\\Users\\leool\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\8.1.0\\swashbuckle.aspnetcore.swagger.8.1.0.nupkg.sha512",
+    "C:\\Users\\leool\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\8.1.0\\swashbuckle.aspnetcore.swaggergen.8.1.0.nupkg.sha512",
+    "C:\\Users\\leool\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\8.1.0\\swashbuckle.aspnetcore.swaggerui.8.1.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "DesafioApi depende de Swashbuckle.AspNetCore (>= 8.0.4) mas Swashbuckle.AspNetCore 8.0.4 não foi encontrado. Swashbuckle.AspNetCore 8.1.0 foi resolvido.",
+      "projectPath": "C:\\Users\\leool\\OneDrive\\Documentos\\Paschoalotto\\Desafio\\Desafio\\Desafio\\DesafioApi\\DesafioApi.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\leool\\OneDrive\\Documentos\\Paschoalotto\\Desafio\\Desafio\\Desafio\\DesafioApi\\DesafioApi.csproj",
+      "libraryId": "Swashbuckle.AspNetCore",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

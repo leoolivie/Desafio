@@ -1,0 +1,22 @@
+<table class="tabela-titulos">
+  <thead>
+    <tr>
+      <th>Número</th>
+      <th>Devedor</th>
+      <th>Parcelas</th>
+      <th>Valor Original</th>
+      <th>Dias em atraso</th>
+      <th>Valor Atualizado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let t of titulos">
+      <td>{{t.numeroTitulo}}</td>
+      <td>{{t.nomeDevedor}}</td>
+      <td>{{t.quantidadeParcelas}}</td>
+      <td>{{t.valorOriginal | currency:'BRL'}}</td>
+      <td>{{t.diasAtraso}}</td>
+      <td>{{t.valorAtualizado | currency:'BRL'}}</td>
+    </tr>
+  </tbody>
+</table>

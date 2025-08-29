@@ -1,0 +1,54 @@
+<form (ngSubmit)="salvar()" class="formulario-titulo">
+  <h2>Cadastro de Título</h2>
+
+  <div class="form-group">
+    <label>Número do título</label>
+
+    <input [(ngModel)]="titulo.numeroTitulo" name="numeroTitulo" required>
+  </div>
+
+  <div class="form-group">
+    <label>Nome do devedor</label>
+
+    <input [(ngModel)]="titulo.nomeDevedor" name="nomeDevedor" required>
+  </div>
+
+  <div class="form-group">
+    <label>CPF do devedor</label>
+
+    <input [(ngModel)]="titulo.cpfDevedor" name="cpfDevedor" required>
+  </div>
+
+  <div class="form-group">
+    <label>% Juros</label>
+
+    <input type="number" [(ngModel)]="titulo.percentualJuros" name="percentualJuros" required>
+  </div>
+
+  <div class="form-group">
+    <label>% Multa</label>
+
+    <input type="number" [(ngModel)]="titulo.percentualMulta" name="percentualMulta" required>
+  </div>
+
+  <h4>Parcelas</h4>
+
+  <div *ngFor="let parcela of titulo.parcelas" class="parcela-listada">
+    Parcela {{parcela.numero}} - Vencimento: {{parcela.dataVencimento | date:'d/M/y'}} - Valor: {{parcela.valor}}
+  </div>
+
+  <div class="form-group-vertical">
+    <label>Número da parcela</label>
+    <input placeholder="Número da parcela" type="number" [(ngModel)]="parcela.numero" name="numeroParcela">
+
+    <label>Data de vencimento</label>
+    <input placeholder="Data de vencimento" type="date" [(ngModel)]="parcela.dataVencimento" name="dataVencimento">
+
+    <label>Valor</label>
+    <input placeholder="Valor da parcela" type="number" [(ngModel)]="parcela.valor" name="valorParcela">
+
+    <button type="button" class="btn-add-parcela" (click)="adicionarParcela()">Adicionar Parcela</button>
+  </div>
+
+  <button type="submit" class="btn-salvar">Salvar</button>
+</form>

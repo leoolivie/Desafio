@@ -1,0 +1,24 @@
+.tabela-titulos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  background: #fff;
+  box-shadow: 0 2px 8px #0001;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabela-titulos th,
+.tabela-titulos td {
+  padding: 12px 8px;
+  text-align: left;
+}
+
+.tabela-titulos thead {
+  background: #1976d2;
+  color: #fff;
+}
+
+.tabela-titulos tr:nth-child(even) {
+  background: #f5f5f5;
+}
