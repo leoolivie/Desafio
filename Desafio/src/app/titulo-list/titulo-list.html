@@ -16,19 +16,19 @@
   </thead>
 
   <tbody>
-    @for (t of titulos; track t.numeroTitulo) {
+    @for (registro of titulos; track registro.numeroTitulo) {
     <tr>
-      <td>{{ t.numeroTitulo }}</td>
+      <td>{{ registro.numeroTitulo }}</td>
 
-      <td>{{ t.nomeDevedor }}</td>
+      <td>{{ registro.nomeDevedor }}</td>
 
-      <td>{{ t.quantidadeParcelas }}</td>
+      <td>{{ registro.quantidadeParcelas }}</td>
 
-      <td>{{ t.valorOriginal | currency:'BRL' }}</td>
+      <td>{{ registro.valorOriginal | currency:'BRL' }}</td>
 
-      <td>{{ t.diasAtraso }}</td>
+      <td>{{ registro.diasAtraso }}</td>
 
-      <td>{{ t.valorAtualizado | currency:'BRL' }}</td>
+      <td>{{ registro.valorAtualizado | currency:'BRL' }}</td>
     </tr>
     }
   </tbody>
